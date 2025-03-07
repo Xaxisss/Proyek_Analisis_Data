@@ -92,7 +92,7 @@ customers_df["order_purchase_timestamp"] = pd.to_datetime(customers_df["order_pu
 customers_df["price"] = pd.to_numeric(customers_df["price"], errors="coerce")
 
 with st.sidebar:
-    st.image("dashboard\Free.png")
+    st.image("dashboard/Free.png")
     customers_df["order_purchase_timestamp"] = pd.to_datetime(customers_df["order_purchase_timestamp"])
     sellers_df["order_purchase_timestamp"] = pd.to_datetime(sellers_df["order_purchase_timestamp"])
     
