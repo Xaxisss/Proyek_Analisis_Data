@@ -80,9 +80,14 @@ def create_rfm(df):
     selected_scores = np.linspace(unique_scores[0], unique_scores[-1], num_labels, dtype=int)
 
     return rfm, selected_scores
+# URL file CSV dari GitHub
+sellers_url = "https://media.githubusercontent.com/media/Xaxisss/Proyek_Analisis_Data/refs/heads/main/sellers_data.csv"
+customers_url = "https://media.githubusercontent.com/media/Xaxisss/Proyek_Analisis_Data/refs/heads/main/customers_data.csv"
 
-sellers_df = pd.read_csv("dashboard/sellers_data.csv")
-customers_df = pd.read_csv("dashboard/customers_data.csv")
+# Baca data dari URL
+sellers_df = pd.read_csv(sellers_url)
+customers_df = pd.read_csv(customers_url)
+
 customers_df["order_purchase_timestamp"] = pd.to_datetime(customers_df["order_purchase_timestamp"])
 customers_df["price"] = pd.to_numeric(customers_df["price"], errors="coerce")
 
